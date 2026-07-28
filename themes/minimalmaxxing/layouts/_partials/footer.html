@@ -1,0 +1,18 @@
+<div class="emacs-modeline">
+  <div class="modeline-left">
+    <span class="modeline-status">-uu-</span>
+    <span class="modeline-buffer">
+      {{- if .IsHome -}}
+        index.md
+      {{- else if .File -}}
+        {{ .File.Path }}
+      {{- else -}}
+        {{ .Title | lower | replaceRE " " "-" }}.md
+      {{- end -}}
+    </span>
+    <span class="modeline-mode">(Hugo)</span>
+  </div>
+  <div class="modeline-right">
+    <span class="modeline-copyright">&copy; {{ now.Year }} {{ site.Title }}</span>
+  </div>
+</div>

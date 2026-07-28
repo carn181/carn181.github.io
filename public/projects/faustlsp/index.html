@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>GSOC 2025 Submission for GRAME: faustlsp | Ryan Varghese</title>
+
+        <link rel="stylesheet" href="/css/main.14146cb4cbd29817331161a7efaac90076a867b4f09c83d3c7277722fe2aef40.css" integrity="sha256-FBRstMvSmBczEWGn76rJAHaoZ7TwnIPTxyd3Iv4q70A=" crossorigin="anonymous">
+
+
+        <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  
+  <main>
+    
+  <h1>GSOC 2025 Submission for GRAME: faustlsp</h1>
+
+  
+  
+  <time datetime="2025-05-15T00:00:00&#43;00:00">May 15, 2025</time>
+
+  <blockquote>
+<p><strong>Official GSoC 2025 Submission Gist:</strong><br>
+<a href="https://gist.github.com/carn181/0e953b5463de9f528ff58183d55fcfdc">https://gist.github.com/carn181/0e953b5463de9f528ff58183d55fcfdc</a></p>
+</blockquote>
+<hr>
+<h3 id="project-summary">Project Summary</h3>
+<p>The primary objective of this project was to enhance the developer experience for the <strong>Faust</strong> programming language by creating a suite of three interconnected tools:</p>
+<ol>
+<li><strong><code>faustlsp</code></strong>: An LSP (Language Server Protocol) server.</li>
+<li><strong>VS Code Client Extension</strong>: Dedicated editor integration.</li>
+<li><strong><code>faustfmt</code></strong>: A standalone, high-performance code formatter.</li>
+</ol>
+<p>These tools aim to provide modern IDE features such as real-time diagnostics, intelligent code completion, hover documentation, and consistent code formatting, thereby making Faust development more efficient and enjoyable.</p>
+<hr>
+<h3 id="summary-of-coding-and-development">Summary of Coding and Development</h3>
+<p>The project was structured into three distinct development phases:</p>
+<ol>
+<li>
+<p><strong>Foundational Parser Work (<code>tree-sitter-faust</code>):</strong><br>
+The initial phase focused on the foundational component: the <code>tree-sitter-faust</code> parser. This involved extensive work to improve the parser&rsquo;s robustness, ensuring it could accurately and completely parse all valid Faust syntax. This step was crucial as the entire project relies on a perfectly parsed Abstract Syntax Tree (AST) to function correctly. <em>(First ~2 weeks)</em></p>
+</li>
+<li>
+<p><strong>Core Applications Architecture:</strong></p>
+<ul>
+<li><strong>LSP Server (<code>faustlsp</code>):</strong> Built from the ground up in <strong>Go</strong>, chosen for its strong concurrency primitives and performance, which are well-suited for a server handling multiple concurrent requests.</li>
+<li><strong>VS Code Extension:</strong> Developed in <strong>TypeScript</strong> to seamlessly integrate with the VS Code API.</li>
+<li><strong>Code Formatter (<code>faustfmt</code>):</strong> Implemented as a standalone command-line tool in <strong>Rust</strong>, leveraging its performance and memory safety for efficient code manipulation.</li>
+</ul>
+</li>
+<li>
+<p><strong>LSP Features &amp; Refinement:</strong><br>
+The final and most extensive phase was dedicated to implementing and refining the planned LSP features. This involved building core logic in Go to handle JSON-RPC requests, integrating <code>tree-sitter</code> and the native Faust compiler for code analysis and error reporting, and implementing features like code completion, syntax error detection, and <code>Goto Definition</code>.</p>
+</li>
+</ol>
+<hr>
+<h3 id="achieved-goals">Achieved Goals</h3>
+<h4 id="1-faustlsp-lsp-server">1) <code>faustlsp</code> (LSP Server)</h4>
+<ul>
+<li><strong>Repository:</strong> <a href="https://github.com/carn181/faustlsp">github.com/carn181/faustlsp</a></li>
+</ul>
+<p>The LSP server currently operates on both Linux and macOS with the following features:</p>
+<ul>
+<li><strong>Diagnostics:</strong> Provides real-time syntax errors (detected via <code>tree-sitter-faust</code>) and compiler errors (reported by native Faust compiler on line 1).</li>
+<li><strong>Document Symbols:</strong> Provides hierarchical symbol structure of Faust files for document outlines, breadcrumbs, and code-folding.</li>
+<li><strong>Formatting:</strong> Rapid and consistent code formatting via <code>faustfmt</code>.</li>
+<li><strong>Goto Definition:</strong> Quickly navigates to symbol definitions across the current file or external libraries.</li>
+<li><strong>Hover Documentation:</strong> Analyzes comments directly preceding symbol definitions and renders them as hover documentation.</li>
+<li><strong>Code Completion:</strong> Identifies valid symbols at cursor position for auto-completion suggestions.</li>
+</ul>
+<h4 id="2-vs-code-extension">2) VS Code Extension</h4>
+<ul>
+<li><strong>Repository:</strong> <a href="https://github.com/carn181/vscode-faust">github.com/carn181/vscode-faust</a></li>
+</ul>
+<p>Serves as the client interface layer, sending LSP requests to <code>faustlsp</code> and displaying responses in VS Code. <em>(See also <a href="https://github.com/kisielk/vscode-faust">Kamil Kisiel&rsquo;s fork</a> adding WASM compilation and interactive block diagrams).</em></p>
+<h4 id="3-faustfmt-faust-code-formatter">3) <code>faustfmt</code> (Faust Code Formatter)</h4>
+<ul>
+<li><strong>Repository:</strong> <a href="https://github.com/carn181/faustfmt">github.com/carn181/faustfmt</a></li>
+</ul>
+<p>Standalone command-line tool written in Rust. Parses Faust source files and formats contents according to <code>tree-sitter</code> style rules.</p>
+<hr>
+<h3 id="goals-not-achieved">Goals Not Achieved</h3>
+<ul>
+<li><strong>Find References:</strong> The only planned feature not implemented was <em>Find References</em>. Due to <code>tree-sitter</code> ASTs lacking built-in scope information, implementing an algorithm to reliably locate all symbol references across complex scopes extended beyond the project timeline.</li>
+</ul>
+<hr>
+<h3 id="possible-future-improvements">Possible Future Improvements</h3>
+<ul>
+<li><strong>Improved Documentation:</strong> Make documentation across all components more comprehensive for new users.</li>
+<li><strong>Improved Formatting:</strong> Expand <code>faustfmt</code> query rules for complex Faust expressions and constructs.</li>
+<li><strong>Windows Support:</strong> Extend <code>faustlsp</code> to support the Windows operating system.</li>
+<li><strong>VS Code Integration:</strong> Contribute directly to official <code>vscode-faust</code> extension main branch.</li>
+<li><strong>Enhanced Stability:</strong> Address edge-case mutex lock issues under heavy edit traffic.</li>
+<li><strong>Compiler File-Include Integration:</strong> Improve support for files passed directly to the Faust compiler.</li>
+<li><strong>Better Document Symbols:</strong> Expand document symbol reporting for environments and iterations.</li>
+<li><strong>Bugfixes through Better Testing:</strong> Implement automated LSP end-to-end testing cycles.</li>
+</ul>
+<hr>
+<h3 id="lessons-learned">Lessons Learned</h3>
+<ul>
+<li><strong>Parser Limitations:</strong> While <code>tree-sitter</code> is powerful and accessible, hand-written parsers offer superior flexibility for domain-specific language behavior.</li>
+<li><strong>Importance of Logging:</strong> Since LSP features are difficult to test with traditional unit tests, comprehensive logging proved essential for debugging JSON-RPC client-server communication.</li>
+<li><strong>Go Tooling:</strong> Go&rsquo;s concurrency model simplified multi-client request handling, and clean error handling made modifying the codebase straightforward.</li>
+</ul>
+<hr>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Special thanks to my GSoC mentors <strong>Thomas Rushton</strong>, <strong>Karl Hiner</strong>, and <strong>Stéphane Letz</strong> for their guidance and support, <strong>Kamil Kisiel</strong> for testing assistance, and the <strong>Faust &amp; GRAME community</strong> for their encouragement.</p>
+
+
+  </main>
+  <footer>
+    <div class="emacs-modeline">
+  <div class="modeline-left">
+    <span class="modeline-status">-uu-</span>
+    <span class="modeline-buffer">projects/faustlsp.md</span>
+    <span class="modeline-mode">(Hugo)</span>
+  </div>
+  <div class="modeline-right">
+    <span class="modeline-copyright">&copy; 2026 Ryan Varghese</span>
+  </div>
+</div>
+
+  </footer>
+</body>
+</html>

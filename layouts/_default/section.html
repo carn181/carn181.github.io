@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <div class="section-container">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+      <div class="section-intro">
+        {{ .Content }}
+      </div>
+    {{ end }}
+
+    <div class="cards-grid">
+      {{ range .Pages }}
+        <article class="portfolio-card">
+          <div class="card-header">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ if .Params.period }}
+              <span class="card-date">{{ .Params.period }}</span>
+            {{ end }}
+          </div>
+
+          {{ if .Params.summary }}
+            <p class="card-summary">{{ .Params.summary }}</p>
+          {{ else if .Summary }}
+            <p class="card-summary">{{ .Summary | truncate 140 }}</p>
+          {{ end }}
+
+          <div class="card-footer">
+            <a href="{{ .RelPermalink }}" class="read-more-link">Read More &rarr;</a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

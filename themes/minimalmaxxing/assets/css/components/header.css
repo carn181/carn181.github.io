@@ -1,0 +1,95 @@
+header {
+  border-bottom: 1px solid #504945;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.brand-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-titles h1 {
+  font-family: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+  color: #fabd2f;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.brand-titles h1 a {
+  color: #fabd2f;
+  text-decoration: none;
+}
+
+.brand-titles h1 a:hover {
+  color: #E29272;
+  text-decoration: underline;
+}
+
+.brand-subtitle {
+  font-family: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+  color: #a89984;
+  font-size: 0.95rem;
+  margin: 0.25rem 0 0 0;
+  line-height: 1.2;
+}
+
+
+#tiresult, .header-ascii {
+  font-family: monospace !important;
+  font-size: 1.6px !important;
+  line-height: 0.95 !important;
+  letter-spacing: 0 !important;
+  margin: 0;
+  background-color: #000000 !important;
+  padding: 2px 4px !important;
+  border-radius: 4px;
+  user-select: none;
+  overflow: hidden;
+  white-space: pre;
+  display: inline-block;
+  border: 1px solid #3c3836 !important;
+  box-shadow: none !important;
+  flex-shrink: 0;
+  transform: scaleX(0.88);
+  transform-origin: left center;
+  margin-right: -15px;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  font-family: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+  color: #ebdbb2;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #E29272;
+  text-decoration: underline;
+}
+
+header nav a.active, header nav a[aria-current="page"] {
+  color: #fabd2f;
+  font-weight: bold;
+}
+
+
+

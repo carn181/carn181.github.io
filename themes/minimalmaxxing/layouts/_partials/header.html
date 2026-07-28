@@ -1,0 +1,10 @@
+<div class="header-brand">
+  {{ partial "ascii-avatar.html" . }}
+  <div class="brand-titles">
+    <h1><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a></h1>
+    <p class="brand-subtitle">CS + Math at Georgia Tech</p>
+  </div>
+</div>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+
+

@@ -1,0 +1,50 @@
+{{ define "main" }}
+  <div class="experience-container">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+      <div class="section-intro">
+        {{ .Content }}
+      </div>
+    {{ end }}
+
+    <div class="cards-grid">
+      {{ range .Pages }}
+        <article class="portfolio-card">
+          <div class="card-header">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ if .Params.period }}
+              <span class="card-date">{{ .Params.period }}</span>
+            {{ end }}
+          </div>
+
+          {{ if .Params.role }}
+            <div class="card-role">
+              <strong>{{ .Params.role }}</strong>
+              {{ if .Params.location }} &bull; <span class="card-location">{{ .Params.location }}</span>{{ end }}
+            </div>
+          {{ end }}
+
+          <p class="card-summary">
+            {{ if .Params.summary }}
+              {{ .Params.summary }}
+            {{ else }}
+              {{ .Summary | truncate 140 }}
+            {{ end }}
+          </p>
+
+          {{ if .Params.tags }}
+            <div class="card-tags">
+              {{ range .Params.tags }}
+                <span class="tag-badge">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          <div class="card-footer">
+            <a href="{{ .RelPermalink }}" class="read-more-link">View Details &rarr;</a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

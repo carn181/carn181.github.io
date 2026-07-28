@@ -1,0 +1,57 @@
+footer {
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  width: 100%;
+  font-family: 'IBM Plex Mono', 'Share Tech Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.emacs-modeline {
+  background-color: #3c3836;
+  color: #ebdbb2;
+  border-top: 1px solid #504945;
+  border-bottom: 1px solid #1d2021;
+  padding: 0.35rem 0.68rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.modeline-left,
+.modeline-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.modeline-status {
+  font-family: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+  background-color: #E29272;
+  color: #1d2021;
+  font-weight: bold;
+  padding: 0.05rem 0.35rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+}
+
+.modeline-buffer {
+  color: #fabd2f;
+  font-weight: bold;
+}
+
+.modeline-mode {
+  color: #d3869b;
+}
+
+.modeline-copyright {
+  color: #a89984;
+}
+
+
+
+
