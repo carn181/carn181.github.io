@@ -2,7 +2,7 @@
 title = "Wizard Quest"
 date = 2025-02-01T00:00:00Z
 period = "Feb 2025"
-award = "1st Place Overall at UGAHacks"
+award = "1st Place in the Game Track at UGAHacks"
 summary = "A Pokémon-GO inspired Augmented Reality and Computer Vision web platform that gamifies real-world exploration events, backed by FastAPI & Postgres."
 tags = ["Python", "FastAPI", "Postgres", "AR/CV", "UGAHacks"]
 +++
@@ -26,4 +26,4 @@ Imagine Pokémon-GO, but designed for real-world campus exploration and live eve
 As technical lead for a team of 3 engineers:
 - I architected the FastAPI backend and database schema to guarantee zero-downtime performance during live demos.
 - Coordinated git workflows, API contracts, and feature priorities under tight 36-hour constraints.
-- **Result:** Wizard Quest won **1st Place overall at UGAHacks**.
+- **Result:** Wizard Quest won **1st Place in the Game Track at UGAHacks**.
