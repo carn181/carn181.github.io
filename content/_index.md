@@ -28,4 +28,4 @@ Explore my dedicated section pages for [**Experience**](/experience) and [**Proj
 
 - **GitHub:** [github.com/carn181](https://github.com/carn181)
 - **LinkedIn:** [linkedin.com/in/ryan-v-764729280](https://www.linkedin.com/in/ryan-v-764729280/)
-- **Email:** [ryan@gatech.edu](mailto:ryan@gatech.edu)
+- **Email:** [nervar329@gmail.com](mailto:nervar329@gmail.com)
