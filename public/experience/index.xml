@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Experience on Ryan Varghese</title>
-    <link>https://ryanblog.xyz/experience/</link>
+    <link>http://localhost:1313/experience/</link>
     <description>Recent content in Experience on Ryan Varghese</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ryanblog.xyz/experience/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/experience/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GRAME - Centre National de Création Musicale</title>
-      <link>https://ryanblog.xyz/projects/faustlsp/</link>
+      <link>http://localhost:1313/projects/faustlsp/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://ryanblog.xyz/projects/faustlsp/</guid>
+      <guid>http://localhost:1313/projects/faustlsp/</guid>
       <description>Developed faustlsp (Go, Tree-Sitter) and a VS Code extension (TypeScript, Rust) for Faust DSP language during Google Summer of Code with GRAME in Lyon, France.</description>
     </item>
     <item>
       <title>Knack Peer Tutoring</title>
-      <link>https://ryanblog.xyz/experience/knack/</link>
+      <link>http://localhost:1313/experience/knack/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://ryanblog.xyz/experience/knack/</guid>
+      <guid>http://localhost:1313/experience/knack/</guid>
       <description>Delivered 100+ hours of 1-on-1 CS and Math peer tutoring at Georgia Tech, maintaining a 5.0/5.0 rating across 60+ verified student reviews.</description>
     </item>
   </channel>

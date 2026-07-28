@@ -9,16 +9,10 @@
 
     <ul class="posts-list">
       {{ range .Pages }}
-        <li style="margin-bottom: 1.25rem;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <h2 style="margin: 0; font-size: 1.2rem;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-            <time class="post-date" style="font-size: 0.85rem; color: var(--fg-secondary);">{{ .Date | time.Format "2006-01-02" }}</time>
-          </div>
-          {{ if .Summary }}
-            <p style="margin: 0.4rem 0 0 0; color: var(--fg-primary); font-size: 0.95rem;">
-              {{ .Summary | truncate 160 }}
-            </p>
-          {{ end }}
+        <li style="margin-bottom: 0.75rem;">
+          <h2 style="margin: 0; font-size: 1.2rem; font-weight: normal;">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
         </li>
       {{ end }}
     </ul>

@@ -12,14 +12,15 @@ Explore my dedicated section pages for [**Experience**](/experience) and [**Proj
 
 ### Featured Work
 
+- **[faustlsp & VS Code Extension](/projects/faustlsp/)** `[Go, Rust, TypeScript]`  
+  Language Server Protocol server and VS Code extension for Faust built during Google Summer of Code with GRAME.
+
 - **[LevinDB](/projects/levindb/)** `[Go, Key-Value Store, Mutex Sharding, WAL]`  
   Concurrent in-memory Key-Value store with a 64-way sharded mutex architecture, custom binary protocol, and WAL durability.
 
 - **[Wizard Quest](/projects/wizard-quest/)** `[Python, FastAPI, Postgres, AR/CV]`  
   Pokémon-GO inspired AR/CV web platform for exploration events. *1st Place at UGAHacks*.
 
-- **[faustlsp & VS Code Extension](/projects/faustlsp/)** `[Go, Rust, TypeScript]`  
-  Language Server Protocol server and VS Code extension for Faust built during Google Summer of Code with GRAME.
 
 ---
 
