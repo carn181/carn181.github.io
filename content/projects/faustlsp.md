@@ -9,6 +9,8 @@ aliases = ["/experience/grame/"]
 
 > **Official GSoC 2025 Submission Gist:**  
 > [https://gist.github.com/carn181/0e953b5463de9f528ff58183d55fcfdc](https://gist.github.com/carn181/0e953b5463de9f528ff58183d55fcfdc)
+>
+> Repositories: [faustlsp](https://github.com/carn181/faustlsp) · [vscode-faust](https://github.com/carn181/vscode-faust) · [faustfmt](https://github.com/carn181/faustfmt)
 
 ---
 
@@ -20,6 +22,18 @@ The primary objective of this project was to enhance the developer experience fo
 3. **`faustfmt`**: A standalone, high-performance code formatter.
 
 These tools aim to provide modern IDE features such as real-time diagnostics, intelligent code completion, hover documentation, and consistent code formatting, thereby making Faust development more efficient and enjoyable.
+
+---
+
+### Tech stack
+
+| Component | Technologies |
+|---|---|
+| LSP server | Go, JSON-RPC, Tree-Sitter bindings |
+| Parser/AST | `tree-sitter-faust` |
+| VS Code extension | TypeScript, VS Code API |
+| Formatter | Rust, Topiary query engine |
+| Tooling | Native Faust compiler, GitHub Actions |
 
 ---
 

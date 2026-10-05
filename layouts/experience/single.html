@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <article class="post-single">
+    <h1>{{ .Title }}</h1>
+
+    {{ if .Date }}
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      <time datetime="{{ $dateMachine }}" class="post-date" style="font-size: 0.85rem; color: var(--fg-secondary); display: block; margin-bottom: 1.5rem;">{{ $dateHuman }}</time>
+    {{ end }}
+
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+
+    <div style="margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+      <a href="/experience" style="color: var(--fg-secondary); font-size: 0.85rem; text-decoration: none;">&larr; experience</a>
+    </div>
+  </article>
+{{ end }}

@@ -11,6 +11,23 @@ tags = ["Python", "FastAPI", "Postgres", "AR/CV", "UGAHacks"]
 
 Imagine Pokémon-GO, but designed for real-world campus exploration and live event scavenger hunts. **Wizard Quest** was conceived and built during a 36-hour hackathon sprint at **UGAHacks**, where our team set out to combine interactive Augmented Reality (AR) and Computer Vision (CV) into an engaging web application.
 
+[github.com/carn181/ugahacks-11](https://github.com/carn181/ugahacks-11) · [Devpost submission](https://devpost.com/software/wizard-quest) · [Live demo](https://wizard-quest-uga.vercel.app)
+
+[![Wizard Quest demo video](https://img.youtube.com/vi/nheFrOx770I/0.jpg)](https://www.youtube.com/watch?v=nheFrOx770I)
+
+---
+
+### Tech stack
+
+| Layer | Technologies |
+|---|---|
+| Backend | Python, FastAPI, PostgreSQL/PostGIS, SQLAlchemy |
+| Frontend | Next.js, React, TypeScript, Tailwind CSS, Framer Motion |
+| AR/CV | AR.js, Three.js, WebXR, computer vision hand tracking |
+| Maps | Leaflet |
+| Real-time | Socket.io |
+| DevOps | Git, Docker, Vercel |
+
 ---
 
 ### How It Works
