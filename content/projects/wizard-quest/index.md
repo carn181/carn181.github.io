@@ -1,7 +1,7 @@
 +++
 title = "Wizard Quest"
-date = 2025-02-01T00:00:00Z
-period = "Feb 2025"
+date = 2026-02-01T00:00:00Z
+period = "Feb 2026"
 award = "1st Place in the Game Track at UGAHacks"
 summary = "A Pokémon-GO inspired Augmented Reality and Computer Vision web platform that gamifies real-world exploration events, backed by FastAPI & Postgres."
 tags = ["Python", "FastAPI", "Postgres", "AR/CV", "UGAHacks"]
